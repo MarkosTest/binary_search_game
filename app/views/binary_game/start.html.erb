@@ -1,0 +1,32 @@
+<div>
+  <% if @player=="1" %>
+    <h2>Hola Jessica Pedorrilla, es bueno saber que aceptas lo pedorrilla que eres!</h2>
+  <% elsif @player=="2" %>
+    <h2>A mi no me engañas Jessica, no eres Markos, él esta bien papasito, y a ti desde aca se te identifica lo pedorrilla!!</h2>
+  <% end %> 
+</div>
+
+<div>
+  <%= label_tag('top-limit-number', "Ingresa hasta que numero deseas poder escoger") %>
+  <%= text_field_tag('top-limit-number') %>
+</div>
+
+<div>
+  <%= button_tag "Start", id: "btn-start" %>
+</div>
+
+<div id="div-guess" style="display: none;">
+  <div>
+    <p>Has escogido el número <span id="number-label"></span> y hay <span id="attemps-label"></span> oportunidades para adivinar tu numero</p>
+  </div>
+
+  <div>
+    <%= button_tag "Adivina!", id: "btn-guess" %>
+  </div>
+  
+  <div id="number-guess" style="display: none;">
+    <p>Es tu número <span id="guess-label"></span>? <%= button_tag "Si", id: "btn-yes" %> <%= button_tag "No, mi numero es mayor", id: "btn-no-greater" %> 
+    <%= button_tag "No, mi numero es menor", id: "btn-no-less" %> </p>
+    <p>Número de intentos: <span id="label-attemps-used"></span></p>
+  </div>
+</div>

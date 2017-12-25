@@ -1,0 +1,2 @@
+module BinaryGameHelper
+end

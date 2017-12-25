@@ -1,0 +1,11 @@
+<h1>¡Bienvenido al juego de la Busqueda Binaria!</h1>
+
+<div class="center">
+  <p>Por favor selecciona un jugador:</p>
+  
+  <%= form_tag("/start", method: "get") do %>
+    <%= select_tag 'player', options_for_select([['Jessica Padilla Pedorrilla', 1], ['Markos Papasito Lerin', 2]]) %>
+    <%= submit_tag("¡Iniciar!") %>
+  <% end %>
+
+</div>
